@@ -1,44 +1,43 @@
 import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-import { CHECK_AUTH } from '@/store/actionsType'
 
 export const ApiService = {
-  init () {
-    Vue.use(VueAxios, axios)
-    Vue.axios.defaults.baseURL = process.env.VUE_APP_baseUrl
-    Vue.axios.defaults.headers.common['Content-Type'] = 'application/json'
-    Vue.axios.defaults.headers.common['Cache-Control'] = 'no-cache'
-    Vue.axios.defaults.headers.common['Accept'] = 'application/json'
-    if (localStorage.getItem('access_token')) {
-      console.log('init')
-      this.$store.dispatch(CHECK_AUTH)
-    }
+  init (store) {
+    return new Promise((resolve, reject) => {
+      Vue.use(VueAxios, axios)
+      Vue.axios.defaults.baseURL = process.env.VUE_APP_baseUrl
+      Vue.axios.defaults.headers.common['Content-Type'] = 'application/json'
+      Vue.axios.defaults.headers.common['Cache-Control'] = 'no-cache'
+      Vue.axios.defaults.headers.common['Accept'] = 'application/json'
+      if (localStorage.getItem('access_token')) {
+        console.log('init')
+        store.dispatch('checkAuth').then(() => {
+          resolve(true)
+        }).catch(err => {
+          reject(err)
+        })
+      }
+    })
   },
   setToken (token) {
     Vue.axios.defaults.headers.common['Authorization'] = 'Bearer ' + token
   },
-  query (resource, params) {
-    return Vue.axios.get(resource, params).catch(error => {
-      throw new Error(`ApiService ${error}`)
-    })
-  },
-  get (resource, slug = '') {
-    return Vue.axios.get(`${resource}/${slug}`).catch(error => {
-      throw new Error(`ApiService ${error}`)
-    })
+  get (resource, params = null) {
+    return Vue.axios.get(resource, params)
   },
   post (resource, params) {
     return Vue.axios.post(`${resource}`, params)
   },
-  update (resource, slug, params) {
-    return Vue.axios.put(`${resource}/${slug}`, params)
-  },
   put (resource, params) {
-    return Vue.axios.put(`${resource}`, params)
+    return Vue.axios.put(`${resource}`, params).catch(error => {
+      throw new Error(`ApiService ${error}`)
+    })
   },
   delete (resource) {
-    return Vue.axios.delete(resource)
+    return Vue.axios.delete(resource).catch(error => {
+      throw new Error(`ApiService ${error}`)
+    })
   }
 }
 
@@ -55,14 +54,13 @@ export const Auth = {
     })
   },
   register (registrationData) {
-    return ApiService.post('/register/', registrationData).then(response => {
-      Vue.axios.defaults.headers.common['Authorization'] = 'Bearer ' + response.data['access_token']
-      return response.data
+    return ApiService.post('/api/register/', registrationData).then(response => {
+      return response.data.success
     })
   },
   user () {
-    return ApiService.get('/user').then(response => {
-      return response.data
+    return ApiService.get('/api/user').then(response => {
+      return response.data.success
     })
   }
 }

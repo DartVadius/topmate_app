@@ -52,7 +52,6 @@
 
 <script>
 import { mapState } from 'vuex'
-import { REGISTER, CHECK_AUTH } from '@/store/actionsType'
 
 export default {
   name: 'RegisterComponent',
@@ -80,11 +79,17 @@ export default {
   methods: {
     onSubmit (evt) {
       evt.preventDefault()
-      this.$store.dispatch(REGISTER, this.form).then(() => {
-        this.$store.dispatch(CHECK_AUTH).then((response) => {
-          if (response) {
-            this.$router.push({ name: 'adminPanel' })
-          }
+      this.$store.dispatch('register', this.form).then((response) => {
+        const auth = {
+          username: this.form.email,
+          password: this.form.password
+        }
+        this.$store.dispatch('login', auth).then(() => {
+          this.$store.dispatch('checkAuth').then((response) => {
+            if (response) {
+              this.$router.push({ name: 'adminPanel' })
+            }
+          })
         })
       }).catch(err => {
         console.log(err)

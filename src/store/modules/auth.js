@@ -1,5 +1,4 @@
 import { Auth, ApiService } from '@/api/ApiService'
-import { LOGIN, LOGOUT, REGISTER, CHECK_AUTH } from '../actionsType'
 import { SET_AUTH, PURGE_AUTH, SET_ERROR, SET_CURRENT_USER, SET_USER_ROLE } from '../mutationsType'
 import Vue from 'vue'
 
@@ -23,23 +22,26 @@ const getters = {
 }
 
 const actions = {
-  [LOGIN] ({ commit }, credentials) {
-    return new Promise(resolve => {
+  login ({ commit }, credentials) {
+    return new Promise((resolve, reject) => {
       Auth.login(credentials).then(response => {
         commit(SET_AUTH)
         resolve(response)
       }).catch(error => {
         commit(SET_ERROR, error)
+        reject(error)
       })
     })
   },
-  [LOGOUT] ({ commit }) {
-    commit(PURGE_AUTH)
+  logout ({ commit }) {
+    return new Promise((resolve) => {
+      commit(PURGE_AUTH)
+      resolve()
+    })
   },
-  [REGISTER] ({ commit }, credentials) {
+  register ({ commit }, credentials) {
     return new Promise((resolve, reject) => {
       Auth.register(credentials).then((response) => {
-        commit(SET_AUTH)
         resolve(response)
       }).catch((error) => {
         commit(SET_ERROR, error)
@@ -47,7 +49,7 @@ const actions = {
       })
     })
   },
-  [CHECK_AUTH] ({ commit }) {
+  checkAuth ({ commit }) {
     return new Promise((resolve, reject) => {
       let token = localStorage.getItem('access_token')
       if (token) {
@@ -76,7 +78,7 @@ const mutations = {
   },
   [SET_AUTH] (state) {
     state.isAuthenticated = true
-    state.errors = {}
+    state.errors = null
   },
   [PURGE_AUTH] (state) {
     state.isAuthenticated = false
@@ -87,11 +89,11 @@ const mutations = {
     localStorage.removeItem('refresh_token')
     Vue.axios.defaults.headers.common['Authorization'] = null
   },
-  [SET_CURRENT_USER] (state, response) {
-    state.currentUser = response.data
+  [SET_CURRENT_USER] (state, user) {
+    state.currentUser = user
   },
-  [SET_USER_ROLE] (state, response) {
-    state.userRole = response.data.role
+  [SET_USER_ROLE] (state, user) {
+    state.userRole = user.role
   }
 }
 

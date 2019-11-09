@@ -24,9 +24,6 @@ const routes = [
     path: '/adminio/register',
     name: 'register',
     meta: { isPublic: true },
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "register" */ '@/views/adminio/Register')
   },
   {
@@ -38,13 +35,13 @@ const routes = [
   {
     path: '/adminio/panel',
     name: 'adminPanel',
-    meta: { isPublic: false },
+    meta: { isPublic: false, restricted: ['user'] },
     component: () => import(/* webpackChunkName: "panel" */ '@/views/adminio/AdminPanel')
   },
   {
     path: '/adminio/welcome',
     name: 'welcome',
-    meta: { isPublic: false },
+    meta: { isPublic: false, restricted: [] },
     component: () => import(/* webpackChunkName: "welcome" */ '@/views/adminio/Welcome')
   }
 ]
