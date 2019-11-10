@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HeaderComponent></HeaderComponent>
+    <HeaderComponent v-if="isAuthenticated"></HeaderComponent>
     <router-view/>
   </div>
 </template>
@@ -12,6 +12,11 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
 export default {
   components: {
     HeaderComponent
+  },
+  computed: {
+    isAuthenticated () {
+      return this.$store.state.auth.isAuthenticated
+    }
   }
 }
 </script>

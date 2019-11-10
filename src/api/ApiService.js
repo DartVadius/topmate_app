@@ -18,6 +18,7 @@ export const ApiService = {
           reject(err)
         })
       }
+      resolve(true)
     })
   },
   setToken (token) {

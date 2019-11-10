@@ -35,13 +35,13 @@ const routes = [
   {
     path: '/adminio/panel',
     name: 'adminPanel',
-    meta: { isPublic: false, restricted: ['user'] },
+    meta: { isPublic: false, restricted: ['user', 'guest'] },
     component: () => import(/* webpackChunkName: "panel" */ '@/views/adminio/AdminPanel')
   },
   {
     path: '/adminio/welcome',
     name: 'welcome',
-    meta: { isPublic: false, restricted: [] },
+    meta: { isPublic: false, restricted: ['guest'] },
     component: () => import(/* webpackChunkName: "welcome" */ '@/views/adminio/Welcome')
   }
 ]

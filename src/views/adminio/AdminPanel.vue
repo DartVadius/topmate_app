@@ -1,11 +1,9 @@
 <template>
-  <div class="row">
-    <div class="col-3">
+  <div class="row mt-0">
+    <div class="col-auto">
       <el-menu
         default-active="2"
-        class="el-menu-vertical-demo"
-        @open="handleOpen"
-        @close="handleClose"
+        class=""
         background-color="#545c64"
         text-color="#fff"
         active-text-color="#ffd04b">
@@ -48,12 +46,6 @@
 export default {
   name: 'AdminPanel',
   methods: {
-    handleOpen (key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleClose (key, keyPath) {
-      console.log(key, keyPath)
-    }
   }
 }
 </script>

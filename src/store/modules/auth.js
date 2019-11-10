@@ -6,7 +6,7 @@ const state = {
   errors: null,
   currentUser: {},
   isAuthenticated: false,
-  userRole: null
+  userRole: 'guest'
 }
 
 const getters = {
@@ -84,7 +84,7 @@ const mutations = {
     state.isAuthenticated = false
     state.currentUser = {}
     state.errors = null
-    state.userRole = null
+    state.userRole = 'guest'
     localStorage.removeItem('access_token')
     localStorage.removeItem('refresh_token')
     Vue.axios.defaults.headers.common['Authorization'] = null

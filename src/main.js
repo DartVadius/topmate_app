@@ -8,24 +8,42 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { ApiService } from './api/ApiService'
 import VeeValidate from 'vee-validate'
-import Element from 'element-ui'
+import './plugins/element'
 
 Vue.use(BootstrapVue)
 Vue.use(VeeValidate)
-Vue.use(Element)
 Vue.config.productionTip = false
 
 ApiService.init(store).then(() => {
   router.beforeEach((to, from, next) => {
-    if (!to.meta.isPublic && !store.state.auth.isAuthenticated) {
-      router.push('adminio/login')
+    if (to.meta.isPublic) {
+      next()
     }
     if (!to.meta.isPublic && store.state.auth.isAuthenticated) {
       if (to.meta.restricted.includes(store.state.auth.userRole)) {
-        router.push('adminio/welcome')
+        next(false)
+      } else {
+        next()
       }
     }
-    console.log(store.state.auth.userRole)
+    if (!to.meta.isPublic && !localStorage.getItem('access_token')) {
+      router.push('/adminio/login').catch(() => {})
+    }
+    if (!to.meta.isPublic && localStorage.getItem('access_token')) {
+      store.dispatch('checkAuth').then(() => {
+        if (store.state.auth.isAuthenticated) {
+          if (to.meta.restricted.includes(store.state.auth.userRole)) {
+            router.push('/adminio/welcome').catch(() => {})
+          } else {
+            next()
+          }
+        } else {
+          router.push('/adminio/login').catch(() => {})
+        }
+      }).catch(err => {
+        console.log(err)
+      })
+    }
     next()
   })
 
