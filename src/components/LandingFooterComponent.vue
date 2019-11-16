@@ -5,7 +5,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <img src="img/logo.png" alt="TheEvenet">
+            <img src="@/assets/img/logo.png" alt="TheEvenet">
             <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
           </div>
 
@@ -42,11 +42,11 @@
             </p>
 
             <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fab fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
             </div>
 
           </div>

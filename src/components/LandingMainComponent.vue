@@ -38,90 +38,90 @@
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="speaker">
-              <img src="img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
+              <img src="@/assets/img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Brenden Legros</a></h3>
                 <p>Quas alias incidunt</p>
                 <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                  <a href=""><i class="fab fa-facebook"></i></a>
+                  <a href=""><i class="fab fa-google-plus"></i></a>
+                  <a href=""><i class="fab fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker">
-              <img src="img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
+              <img src="@/assets/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Hubert Hirthe</a></h3>
                 <p>Consequuntur odio aut</p>
                 <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                  <a href=""><i class="fab fa-facebook"></i></a>
+                  <a href=""><i class="fab fa-google-plus"></i></a>
+                  <a href=""><i class="fab fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker">
-              <img src="img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
+              <img src="@/assets/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Cole Emmerich</a></h3>
                 <p>Fugiat laborum et</p>
                 <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                  <a href=""><i class="fab fa-facebook"></i></a>
+                  <a href=""><i class="fab fa-google-plus"></i></a>
+                  <a href=""><i class="fab fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker">
-              <img src="img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
+              <img src="@/assets/img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Jack Christiansen</a></h3>
                 <p>Debitis iure vero</p>
                 <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                  <a href=""><i class="fab fa-facebook"></i></a>
+                  <a href=""><i class="fab fa-google-plus"></i></a>
+                  <a href=""><i class="fab fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker">
-              <img src="img/speakers/5.jpg" alt="Speaker 5" class="img-fluid">
+              <img src="@/assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Alejandrin Littel</a></h3>
                 <p>Qui molestiae natus</p>
                 <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                  <a href=""><i class="fab fa-facebook"></i></a>
+                  <a href=""><i class="fab fa-google-plus"></i></a>
+                  <a href=""><i class="fab fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker">
-              <img src="img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
+              <img src="@/assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
               <div class="details">
                 <h3><a href="speaker-details.html">Willow Trantow</a></h3>
                 <p>Non autem dicta</p>
                 <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                  <a href=""><i class="fab fa-facebook"></i></a>
+                  <a href=""><i class="fab fa-google-plus"></i></a>
+                  <a href=""><i class="fab fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -173,7 +173,7 @@
               <div class="col-md-2"><time>10:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/1.jpg" alt="Brenden Legros">
+                  <img src="@/assets/img/speakers/1.jpg" alt="Brenden Legros">
                 </div>
                 <h4>Keynote <span>Brenden Legros</span></h4>
                 <p>Facere provident incidunt quos voluptas.</p>
@@ -184,7 +184,7 @@
               <div class="col-md-2"><time>11:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/2.jpg" alt="Hubert Hirthe">
+                  <img src="@/assets/img/speakers/2.jpg" alt="Hubert Hirthe">
                 </div>
                 <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
                 <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
@@ -195,7 +195,7 @@
               <div class="col-md-2"><time>12:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/3.jpg" alt="Cole Emmerich">
+                  <img src="@/assets/img/speakers/3.jpg" alt="Cole Emmerich">
                 </div>
                 <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
                 <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
@@ -206,7 +206,7 @@
               <div class="col-md-2"><time>02:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/4.jpg" alt="Jack Christiansen">
+                  <img src="@/assets/img/speakers/4.jpg" alt="Jack Christiansen">
                 </div>
                 <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
                 <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
@@ -217,7 +217,7 @@
               <div class="col-md-2"><time>03:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/5.jpg" alt="Alejandrin Littel">
+                  <img src="@/assets/img/speakers/5.jpg" alt="Alejandrin Littel">
                 </div>
                 <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
                 <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
@@ -228,7 +228,7 @@
               <div class="col-md-2"><time>04:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/6.jpg" alt="Willow Trantow">
+                  <img src="@/assets/img/speakers/6.jpg" alt="Willow Trantow">
                 </div>
                 <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
                 <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
@@ -245,7 +245,7 @@
               <div class="col-md-2"><time>10:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/1.jpg" alt="Brenden Legros">
+                  <img src="@/assets/img/speakers/1.jpg" alt="Brenden Legros">
                 </div>
                 <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
                 <p>Facere provident incidunt quos voluptas.</p>
@@ -256,7 +256,7 @@
               <div class="col-md-2"><time>11:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/2.jpg" alt="Hubert Hirthe">
+                  <img src="@/assets/img/speakers/2.jpg" alt="Hubert Hirthe">
                 </div>
                 <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
                 <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
@@ -267,7 +267,7 @@
               <div class="col-md-2"><time>12:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/3.jpg" alt="Cole Emmerich">
+                  <img src="@/assets/img/speakers/3.jpg" alt="Cole Emmerich">
                 </div>
                 <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
                 <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
@@ -278,7 +278,7 @@
               <div class="col-md-2"><time>02:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/4.jpg" alt="Jack Christiansen">
+                  <img src="@/assets/img/speakers/4.jpg" alt="Jack Christiansen">
                 </div>
                 <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
                 <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
@@ -289,7 +289,7 @@
               <div class="col-md-2"><time>03:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/5.jpg" alt="Alejandrin Littel">
+                  <img src="@/assets/img/speakers/5.jpg" alt="Alejandrin Littel">
                 </div>
                 <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
                 <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
@@ -300,7 +300,7 @@
               <div class="col-md-2"><time>04:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/6.jpg" alt="Willow Trantow">
+                  <img src="@/assets/img/speakers/6.jpg" alt="Willow Trantow">
                 </div>
                 <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
                 <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
@@ -317,7 +317,7 @@
               <div class="col-md-2"><time>10:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/2.jpg" alt="Hubert Hirthe">
+                  <img src="@/assets/img/speakers/2.jpg" alt="Hubert Hirthe">
                 </div>
                 <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
                 <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
@@ -328,7 +328,7 @@
               <div class="col-md-2"><time>11:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/3.jpg" alt="Cole Emmerich">
+                  <img src="@/assets/img/speakers/3.jpg" alt="Cole Emmerich">
                 </div>
                 <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
                 <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
@@ -339,7 +339,7 @@
               <div class="col-md-2"><time>12:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/1.jpg" alt="Brenden Legros">
+                  <img src="@/assets/img/speakers/1.jpg" alt="Brenden Legros">
                 </div>
                 <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
                 <p>Facere provident incidunt quos voluptas.</p>
@@ -350,7 +350,7 @@
               <div class="col-md-2"><time>02:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/4.jpg" alt="Jack Christiansen">
+                  <img src="@/assets/img/speakers/4.jpg" alt="Jack Christiansen">
                 </div>
                 <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
                 <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
@@ -361,7 +361,7 @@
               <div class="col-md-2"><time>03:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/5.jpg" alt="Alejandrin Littel">
+                  <img src="@/assets/img/speakers/5.jpg" alt="Alejandrin Littel">
                 </div>
                 <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
                 <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
@@ -372,7 +372,7 @@
               <div class="col-md-2"><time>04:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="img/speakers/6.jpg" alt="Willow Trantow">
+                  <img src="@/assets/img/speakers/6.jpg" alt="Willow Trantow">
                 </div>
                 <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
                 <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
@@ -422,64 +422,64 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="img/venue-gallery/1.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/1.jpg" alt="" class="img-fluid">
+              <a href="@/assets/img/venue-gallery/1.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="@/assets/img/venue-gallery/1.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="img/venue-gallery/2.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/2.jpg" alt="" class="img-fluid">
+              <a href="@/assets/img/venue-gallery/2.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="@/assets/img/venue-gallery/2.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="img/venue-gallery/3.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/3.jpg" alt="" class="img-fluid">
+              <a href="@/assets/img/venue-gallery/3.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="@/assets/img/venue-gallery/3.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="img/venue-gallery/4.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/4.jpg" alt="" class="img-fluid">
+              <a href="@/assets/img/venue-gallery/4.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="@/assets/img/venue-gallery/4.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="img/venue-gallery/5.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/5.jpg" alt="" class="img-fluid">
+              <a href="@/assets/img/venue-gallery/5.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="@/assets/img/venue-gallery/5.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="img/venue-gallery/6.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/6.jpg" alt="" class="img-fluid">
+              <a href="@/assets/img/venue-gallery/6.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="@/assets/img/venue-gallery/6.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="img/venue-gallery/7.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/7.jpg" alt="" class="img-fluid">
+              <a href="@/assets/img/venue-gallery/7.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="@/assets/img/venue-gallery/7.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="img/venue-gallery/8.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="img/venue-gallery/8.jpg" alt="" class="img-fluid">
+              <a href="@/assets/img/venue-gallery/8.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="@/assets/img/venue-gallery/8.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
@@ -505,7 +505,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="hotel">
               <div class="hotel-img">
-                <img src="img/hotels/1.jpg" alt="Hotel 1" class="img-fluid">
+                <img src="@/assets/img/hotels/1.jpg" alt="Hotel 1" class="img-fluid">
               </div>
               <h3><a href="#">Hotel 1</a></h3>
               <div class="stars">
@@ -522,7 +522,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="hotel">
               <div class="hotel-img">
-                <img src="img/hotels/2.jpg" alt="Hotel 2" class="img-fluid">
+                <img src="@/assets/img/hotels/2.jpg" alt="Hotel 2" class="img-fluid">
               </div>
               <h3><a href="#">Hotel 2</a></h3>
               <div class="stars">
@@ -539,7 +539,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="hotel">
               <div class="hotel-img">
-                <img src="img/hotels/3.jpg" alt="Hotel 3" class="img-fluid">
+                <img src="@/assets/img/hotels/3.jpg" alt="Hotel 3" class="img-fluid">
               </div>
               <h3><a href="#">Hotel 3</a></h3>
               <div class="stars">
@@ -569,7 +569,13 @@
         </div>
       </div>
 
-      <div class="owl-carousel gallery-carousel">
+      <carousel
+        :autoplay="true"
+        :nav="false"
+        :dots="true"
+        :loop="true"
+        :center="true"
+        :responsive="{ 0: { items: 1 }, 768: { items: 3 }, 992: { items: 4 }, 1200: {items: 5} }">
         <a href="img/gallery/1.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/1.jpg" alt=""></a>
         <a href="img/gallery/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/2.jpg" alt=""></a>
         <a href="img/gallery/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/3.jpg" alt=""></a>
@@ -578,7 +584,7 @@
         <a href="img/gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/6.jpg" alt=""></a>
         <a href="img/gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/7.jpg" alt=""></a>
         <a href="img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/8.jpg" alt=""></a>
-      </div>
+      </carousel>
 
     </section>
 
@@ -596,49 +602,49 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/sponsors/1.png" class="img-fluid" alt="">
+              <img src="@/assets/img/sponsors/1.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/sponsors/2.png" class="img-fluid" alt="">
+              <img src="@/assets/img/sponsors/2.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/sponsors/3.png" class="img-fluid" alt="">
+              <img src="@/assets/img/sponsors/3.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/sponsors/4.png" class="img-fluid" alt="">
+              <img src="@/assets/img/sponsors/4.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/sponsors/5.png" class="img-fluid" alt="">
+              <img src="@/assets/img/sponsors/5.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/sponsors/6.png" class="img-fluid" alt="">
+              <img src="@/assets/img/sponsors/6.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/sponsors/7.png" class="img-fluid" alt="">
+              <img src="@/assets/img/sponsors/7.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/sponsors/8.png" class="img-fluid" alt="">
+              <img src="@/assets/img/sponsors/8.png" class="img-fluid" alt="">
             </div>
           </div>
 
@@ -940,11 +946,21 @@
 </template>
 
 <script>
+import carousel from 'vue-owl-carousel'
+// import '@/assets/lib/jquery/jquery.min.js'
+// import '@/assets/lib/jquery/jquery-migrate.min.js'
+// import 'venobox/venobox/venobox.min'
+
 export default {
-  name: 'LandingMainComponent'
+  name: 'LandingMainComponent',
+  components: { carousel },
+  data () {
+    return {
+      publicPath: process.env.VUE_APP_baseUrl
+    }
+  }
 }
 </script>
 
 <style scoped>
-
 </style>

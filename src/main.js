@@ -9,6 +9,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { ApiService } from './api/ApiService'
 import VeeValidate from 'vee-validate'
 import './plugins/element'
+import 'bootstrap/dist/js/bootstrap.bundle.min'
 
 Vue.use(BootstrapVue)
 Vue.use(VeeValidate)
