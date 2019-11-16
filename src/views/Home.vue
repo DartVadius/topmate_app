@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <landing-header-component></landing-header-component>
+    <landing-intro-component></landing-intro-component>
+    <landing-main-component></landing-main-component>
+    <landing-footer-component></landing-footer-component>
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import LandingHeaderComponent from '@/components/LandingHeaderComponent.vue'
+import LandingIntroComponent from '@/components/LandingIntroComponent.vue'
+import LandingMainComponent from '@/components/LandingMainComponent.vue'
+import LandingFooterComponent from '@/components/LandingFooterComponent.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    LandingHeaderComponent,
+    LandingIntroComponent,
+    LandingMainComponent,
+    LandingFooterComponent
   }
 }
 </script>
