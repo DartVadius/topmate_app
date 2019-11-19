@@ -28,7 +28,7 @@ ApiService.init(store).then(() => {
       }
     }
     if (!to.meta.isPublic && !localStorage.getItem('access_token')) {
-      router.push('/adminio/login').catch(() => {})
+      router.push('/').catch(() => {})
     }
     if (!to.meta.isPublic && localStorage.getItem('access_token')) {
       store.dispatch('checkAuth').then(() => {
