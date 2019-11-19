@@ -10,6 +10,7 @@ export const ApiService = {
       Vue.axios.defaults.headers.common['Content-Type'] = 'application/json'
       Vue.axios.defaults.headers.common['Cache-Control'] = 'no-cache'
       Vue.axios.defaults.headers.common['Accept'] = 'application/json'
+      Vue.axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*'
       if (localStorage.getItem('access_token')) {
         console.log('init')
         store.dispatch('checkAuth').then(() => {
