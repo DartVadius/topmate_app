@@ -1,22 +1,17 @@
 <template>
   <div id="app">
-    <HeaderComponent v-if="isAuthenticated"></HeaderComponent>
     <router-view/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HeaderComponent from '@/components/HeaderComponent.vue'
 import $ from 'jquery'
 import 'jquery.easing'
 import 'venobox'
 import WOW from 'wow.js'
 
 export default {
-  components: {
-    HeaderComponent
-  },
   mounted () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 100) {
@@ -145,11 +140,6 @@ export default {
       let modal = $(this)
       modal.find('#ticket-type').val(ticketType)
     })
-  },
-  computed: {
-    isAuthenticated () {
-      return this.$store.state.auth.isAuthenticated
-    }
   }
 }
 </script>
