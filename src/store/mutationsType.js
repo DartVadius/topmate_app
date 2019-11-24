@@ -8,4 +8,5 @@ export const SET_ERROR = 'setError'
 // faq
 export const SET_FAQ = 'setFaq'
 export const ADD_FAQ = 'addFaq'
+export const EDIT_FAQ = 'editFaq'
 export const DELETE_FAQ = 'deleteFaq'

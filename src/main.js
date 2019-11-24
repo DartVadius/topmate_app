@@ -12,7 +12,11 @@ import './plugins/element'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
 
 Vue.use(BootstrapVue)
-Vue.use(VeeValidate)
+const config = {
+  errorBagName: 'errorBags',
+  fieldsBagName: 'fieldBags'
+}
+Vue.use(VeeValidate, config)
 Vue.config.productionTip = false
 
 ApiService.init(store).then(() => {

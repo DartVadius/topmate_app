@@ -31,8 +31,8 @@ export const ApiService = {
   post (resource, params) {
     return Vue.axios.post(`${resource}`, params)
   },
-  put (resource, params) {
-    return Vue.axios.put(`${resource}`, params).catch(error => {
+  patch (resource, params) {
+    return Vue.axios.patch(`${resource}`, params).catch(error => {
       throw new Error(`ApiService ${error}`)
     })
   },
