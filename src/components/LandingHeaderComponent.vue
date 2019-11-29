@@ -18,7 +18,7 @@
           <li><a href="#hotels">Hotels</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li>
+          <li class="buy-tickets"><a href="#buy-tickets">Buy</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>

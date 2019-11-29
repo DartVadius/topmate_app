@@ -7,16 +7,16 @@
       </h3>
       <div class="card">
         <div class="card-body">
-          <div class="row" v-for="(item, key) in faqList" v-bind:key="item.id">
+          <div class="row my-1 border-bottom" v-for="(item, key) in faqList" v-bind:key="item.id">
             <template v-if="locale === 'en'">
               <div class="col-1"># {{item.id}}</div>
               <div class="col-3">{{item.question_en}}</div>
               <div class="col-6">{{item.answer_en}}</div>
               <div class="col-2">
                 <button class="py-1 px-2 btn btn-sm btn-primary" data-toggle="modal" data-target="#faqEditModal" @click="setEditFaq(key)">
-                  <i class="fas fa-plus fa-lg"></i>
+                  <i class="fas fa-pen fa-lg"></i>
                 </button>
-                <button class="ml-1 py-1 px-2 btn btn-sm btn-danger" @click="saveFaq">
+                <button class="ml-1 py-1 px-2 btn btn-sm btn-danger" @click="deleteFaq(key)">
                   <i class="fas fa-trash-alt fa-lg"></i>
                 </button>
               </div>
@@ -35,10 +35,9 @@
               </button>
             </div>
             <div class="modal-body">
-              <el-form :label-position="labelPosition" label-width="100px" :model="newFaq" data-vv-scope="create">
+              <el-form :label-position="labelPosition" label-width="100px" :model="newFaq" :key="'newFaq'">
                 <el-form-item label="Вопрос">
                   <el-input
-                    v-validate="'required'"
                     name="question"
                     v-model="newFaq.question">
                   </el-input>
@@ -46,8 +45,7 @@
                 </el-form-item>
                 <el-form-item label="Ответ">
                   <el-input
-                    v-validate="'required'"
-                    name="answer"
+                    :key="'newFaq.answer'"
                     type="textarea"
                     :rows="3"
                     v-model="newFaq.answer">
@@ -87,10 +85,9 @@
               </button>
             </div>
             <div class="modal-body">
-              <el-form v-if="editModel" :label-position="labelPosition" label-width="100px" :model="editModel" data-vv-scope="edit">
+              <el-form v-if="editModel" :key="'editFaq'" :label-position="labelPosition" label-width="100px">
                 <el-form-item label="Вопрос">
                   <el-input
-                    v-validate="'required'"
                     name="question"
                     v-model="editModel.question">
                   </el-input>
@@ -98,7 +95,6 @@
                 </el-form-item>
                 <el-form-item label="Ответ">
                   <el-input
-                    v-validate="'required'"
                     name="answer"
                     type="textarea"
                     :rows="3"
@@ -133,6 +129,7 @@
 </template>
 
 <script>
+import $ from 'jquery'
 
 export default {
   name: 'FaqComponent',
@@ -163,28 +160,27 @@ export default {
   },
   methods: {
     saveFaq () {
-      this.$validator.validateAll('create').then(result => {
-        if (result) {
-          this.$store.dispatch('createFaq', this.newFaq).then((response) => {
-            this.faqList = this.$store.state.app.faq
-          })
-        }
+      this.$store.dispatch('createFaq', this.newFaq).then((response) => {
+        this.faqList = this.$store.state.app.faq
       })
     },
     editFaq () {
-      this.$validator.validateAll('edit').then(result => {
-        if (result) {
-          this.$store.dispatch('editFaq', {
-            id: this.faqList[this.editKey].id,
-            data: this.editModel
-          }).then((response) => {
-            this.faqList = this.$store.state.app.faq
-          })
-        }
+      this.$store.dispatch('editFaq', {
+        id: this.faqList[this.editKey].id,
+        data: this.editModel
+      }).then((response) => {
+        this.faqList[this.editKey] = response
+        this.editModel = null
+        $('#faqEditModal').modal('hide')
+      })
+    },
+    deleteFaq (key) {
+      this.$store.dispatch('deleteFaq', this.faqList[key].id).then(() => {
+        this.faqList.splice(key, 1)
       })
     },
     setEditFaq (key) {
-      console.log(this.faqList[key])
+      console.log(key)
       this.editKey = key
       if (this.locale === 'en') {
         this.editModel = {

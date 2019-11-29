@@ -15,7 +15,7 @@
           required
           placeholder="Enter email">
         </b-form-input>
-        <span class="small text-danger" v-if="errors.has('email')">{{ errors.first('email') }}</span>
+        <span class="small text-danger" v-if="errorBags.has('email')">{{ errors.first('email') }}</span>
       </b-form-group>
 
       <b-form-group id="input-group-2" label="Password:" label-for="input-3">
