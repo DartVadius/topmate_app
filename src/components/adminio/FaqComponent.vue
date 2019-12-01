@@ -180,7 +180,7 @@ export default {
       })
     },
     setEditFaq (key) {
-      console.log(key)
+      // console.log(key)
       this.editKey = key
       if (this.locale === 'en') {
         this.editModel = {

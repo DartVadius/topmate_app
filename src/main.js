@@ -10,6 +10,7 @@ import { ApiService } from './api/ApiService'
 import VeeValidate from 'vee-validate'
 import './plugins/element'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
+import VueYoutube from 'vue-youtube'
 
 Vue.use(BootstrapVue)
 const config = {
@@ -17,6 +18,7 @@ const config = {
   fieldsBagName: 'fieldBags'
 }
 Vue.use(VeeValidate, config)
+Vue.use(VueYoutube)
 Vue.config.productionTip = false
 
 ApiService.init(store).then(() => {

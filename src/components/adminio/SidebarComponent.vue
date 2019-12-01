@@ -18,8 +18,8 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span class="menu-title">Icons</span>
+        <a class="nav-link" href="#" @click="openComponent('calculator')">
+          <span class="menu-title">Calculator</span>
           <i class="icon-globe menu-icon"></i>
         </a>
       </li>
