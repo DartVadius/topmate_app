@@ -15,7 +15,7 @@
           required
           placeholder="Enter email">
         </b-form-input>
-        <span class="small text-danger" v-if="errors.has('email')">{{ errors.first('email') }}</span>
+        <span class="small text-danger" v-if="errorBags.has('email')">{{ errors.first('email') }}</span>
       </b-form-group>
 
       <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
@@ -27,7 +27,7 @@
         </b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Password:" label-for="input-3">
+      <b-form-group id="input-group-3" label="Password:" label-for="input-3">
         <b-form-input
           id="input-3"
           v-model="form.password"
@@ -36,7 +36,7 @@
         </b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Repeat Password:" label-for="input-4">
+      <b-form-group id="input-group-4" label="Repeat Password:" label-for="input-4">
         <b-form-input
           id="input-4"
           v-model="form.password_repeat"

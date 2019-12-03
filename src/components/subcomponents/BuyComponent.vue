@@ -2,77 +2,79 @@
   <!--==========================
         Buy Ticket Section
       ============================-->
-  <section id="buy-tickets" class="section-with-bg wow fadeInUp">
+  <section id="buy-topmat" class="section-with-bg wow fadeInUp">
     <div class="container">
 
       <div class="section-header">
         <h2>Buy</h2>
-        <p>Velit consequatur consequatur inventore iste fugit unde omnis eum aut.</p>
+        <p>butyl sound deadener materials and equipment</p>
       </div>
 
       <div class="row">
         <div class="col-lg-4">
           <div class="card mb-5 mb-lg-0">
             <div class="card-body">
-              <h5 class="card-title text-muted text-uppercase text-center">Standard Access</h5>
-              <h6 class="card-price text-center">$150</h6>
-              <hr>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Community Access</li>
-                <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
-                <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
-              </ul>
+              <h5 class="card-title text-muted text-uppercase text-center">36 sqf pack</h5>
+              <h6 class="card-price text-center">$50</h6>
+              <div class="hotel-img">
+                <img src="@/assets/img/materials/dominator-foil.png" alt="Hotel 1" class="img-fluid">
+              </div>
               <hr>
               <div class="text-center">
-                <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">Buy Now</button>
+                <button type="button" class="btn"><i class="fab fa-amazon fa-lg"></i> Buy on Amazon</button>
               </div>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Coverage area: 36 sq.feet</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Number of sheets in the stack: 18</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Pack weight:</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Item Weight:</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Item Thickness:</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Dimensions, inches: </li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Exterior: Aluminiun Foil with TopMat Logo</li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="card mb-5 mb-lg-0">
             <div class="card-body">
-              <h5 class="card-title text-muted text-uppercase text-center">Pro Access</h5>
-              <h6 class="card-price text-center">$250</h6>
-              <hr>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-                <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
-                <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
-              </ul>
+              <h5 class="card-title text-muted text-uppercase text-center">18 sqf pack</h5>
+              <h6 class="card-price text-center">$25</h6>
+              <div class="hotel-img">
+                <img src="@/assets/img/materials/dominator-foil.png" alt="Hotel 1" class="img-fluid">
+              </div>
               <hr>
               <div class="text-center">
-                <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="pro-access">Buy Now</button>
+                <button type="button" class="btn" disabled>Coming soon</button>
               </div>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Coverage area: 18 sq.feet</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Number of sheets in the stack: 9</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Pack weight:</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Item Weight:</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Item Thickness:</li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Dimensions, inches: </li>
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>Exterior: Aluminiun Foil with TopMat Logo</li>
+              </ul>
             </div>
           </div>
         </div>
         <!-- Pro Tier -->
         <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title text-muted text-uppercase text-center">Premium Access</h5>
-              <h6 class="card-price text-center">$350</h6>
-              <hr>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>Workshop Access</li>
-                <li><span class="fa-li"><i class="fa fa-check"></i></span>After Party</li>
-              </ul>
+          <div class="card h-100">
+            <div class="card-body h-100">
+              <h5 class="card-title text-muted text-uppercase text-center">Roller</h5>
+              <h6 class="card-price text-center">$10</h6>
+              <div class="hotel-img">
+                <img src="@/assets/img/materials/dominator-foil.png" alt="Hotel 1" class="img-fluid">
+              </div>
               <hr>
               <div class="text-center">
-                <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access">Buy Now</button>
+                <button type="button" class="btn" disabled>Coming soon</button>
               </div>
-
+              <hr>
             </div>
           </div>
         </div>

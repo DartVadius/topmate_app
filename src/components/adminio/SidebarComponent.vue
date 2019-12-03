@@ -23,18 +23,6 @@
           <i class="icon-globe menu-icon"></i>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pages/charts/chartist.html">
-          <span class="menu-title">Charts</span>
-          <i class="icon-chart menu-icon"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pages/tables/basic-table.html">
-          <span class="menu-title">Tables</span>
-          <i class="icon-grid menu-icon"></i>
-        </a>
-      </li>
       <li class="nav-item nav-category"><span class="nav-link">Sample Pages</span></li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">

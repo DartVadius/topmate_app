@@ -134,6 +134,17 @@ const actions = {
       })
     })
   },
+  detachPart ({ commit }, [modelId, partId]) { // calculator/models/{car_model_id}/parts/{car_part_id}
+    return new Promise((resolve, reject) => {
+      ApiService.delete(`/api/calculator/models/${modelId}/parts/${partId}`).then(response => {
+        // commit(ADD_PART, response.data)
+        resolve(true)
+      }).catch(error => {
+        commit(SET_ERROR, error)
+        reject(error)
+      })
+    })
+  },
   getFaq ({ commit }) {
     return new Promise((resolve, reject) => {
       ApiService.get('/api/faq').then(response => {

@@ -5,14 +5,29 @@
           <i class="fas fa-plus fa-lg"></i>
         </button>
       </h3>
-      <div class="bg-white">
+      <div class="bg-white p-1">
         <div class="row border-bottom" v-for="(model, index) in models" :key="`model-${model.id}`">
           <div class="col-1">#{{model.id}}</div>
           <div class="col-9">
             {{model.name}}
-            <div class="row" v-for="(part, index) in model.parts" :key="`link-${model.id}-${part.id}-${index}`">
-              <div class="col-6">
-                {{part.name}}
+            <div v-if="model.parts.length > 0">
+              <div class="row border">
+                <div class="col-4 border">Часть</div>
+                <div class="col-3 border">Кв.футы</div>
+                <div class="col-3 border">Кв.м</div>
+                <div class="col-2 border"></div>
+              </div>
+              <div class="row border" v-for="(part, index) in model.parts" :key="`link-${model.id}-${part.id}-${index}`">
+                <div class="col-4">
+                  {{part.name}}
+                </div>
+                <div class="col-3 border">{{part.pivot.sqft}}</div>
+                <div class="col-3 border">{{part.pivot.sqm}}</div>
+                <div class="col-2 border">
+                  <button class="m-1 p-1 btn btn-sm btn-danger float-right" @click="unlink(model.id, part.id)">
+                    <i class="fas fa-unlink fa-lg"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -94,14 +109,21 @@
               <el-form :key="'link'" labelPosition="top" label-width="100px" :model="link">
                 Добавить к {{link.modelName}}
                 <el-form-item label="Часть">
-                  <el-select v-model="link.partId" placeholder="Select">
-                    <el-option
-                      v-for="item in parts"
-                      :key="item.id"
-                      :label="item.name"
-                      :value="item.id">
-                    </el-option>
+                  <el-select
+                    name="part"
+                    v-model="link.partId"
+                    v-validate="'required'"
+                    data-vv-scope="link"
+                    placeholder="Select">
+                    <template v-for="item in filteredParts">
+                      <el-option
+                        :key="item.id"
+                        :label="item.name"
+                        :value="item.id">
+                      </el-option>
+                    </template>
                   </el-select>
+                  <div class="small text-danger">{{ errorBags.first('link.part') }}</div>
                 </el-form-item>
                 <el-form-item label="Кв.метры">
                   <el-input
@@ -155,7 +177,8 @@ export default {
         partId: null,
         sqft: null,
         sqm: null
-      }
+      },
+      filteredParts: []
     }
   },
   created () {
@@ -166,15 +189,49 @@ export default {
       this.models = response
     })
   },
+  watch: {
+    link: {
+      handler () {
+        this.updateFilteredParts()
+        console.log(this.filteredParts)
+      },
+      deep: true
+    }
+  },
   methods: {
+    updateFilteredParts () {
+      const index = this.models.map(e => e.id).indexOf(this.link.modelId)
+      if (index > 0) {
+        this.filteredParts = this.parts.filter(item => {
+          return this.models[index].parts.map(e => e.id).indexOf(item.id) < 0
+        })
+      }
+    },
+    purgeLink () {
+      const modelId = this.link.modelId
+      this.link = {
+        modelName: null,
+        modelId: modelId,
+        partId: null,
+        sqft: null,
+        sqm: null
+      }
+    },
+    unlink (modelId, partId) {
+      this.$store.dispatch('detachPart', [modelId, partId]).then((response) => {
+        const indexModel = this.models.map(e => e.id).indexOf(modelId)
+        const indexPart = this.models[indexModel].parts.map(e => e.id).indexOf(partId)
+        this.models[indexModel].parts.splice(indexPart, 1)
+      })
+    },
     showLinkModal (model) {
       this.errorBags.clear()
-      console.log(model)
+      this.purgeLink()
       this.link.modelId = model.id
       this.link.modelName = model.name
     },
     saveLink () {
-      console.log(this.errorBags)
+      // console.log(this.errorBags)
       this.$validator.validateAll('link').then(value => {
         if (value) {
           this.$store.dispatch('attachPart', [this.link.modelId, this.link.partId, {
@@ -182,6 +239,10 @@ export default {
             sqm: this.link.sqm
           }]).then((response) => {
             console.log(response)
+            const index = this.models.map(e => e.id).indexOf(this.link.modelId)
+            this.models[index].parts.push(response)
+            this.updateFilteredParts()
+            this.purgeLink()
           })
         }
       })

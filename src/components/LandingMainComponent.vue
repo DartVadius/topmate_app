@@ -3,21 +3,21 @@
 
     <about-component></about-component>
 
-    <personal-component></personal-component>
-
-    <tabs-component></tabs-component>
-
-    <venue-component></venue-component>
-
-    <hotels-component></hotels-component>
-
     <gallery-component></gallery-component>
+
+    <buy-component></buy-component>
 
     <f-a-q-component></f-a-q-component>
 
-    <subscribe-component></subscribe-component>
+    <calculator-component></calculator-component>
 
-    <buy-component></buy-component>
+<!--    <personal-component></personal-component>-->
+
+<!--    <tabs-component></tabs-component>-->
+
+    <venue-component></venue-component>
+
+<!--    <hotels-component></hotels-component>-->
 
     <contact-component></contact-component>
 
@@ -26,13 +26,13 @@
 
 <script>
 import AboutComponent from './subcomponents/AboutComponent'
-import PersonalComponent from './subcomponents/PersonalComponent'
-import TabsComponent from './subcomponents/TabsComponent'
+// import PersonalComponent from './subcomponents/PersonalComponent'
+// import TabsComponent from './subcomponents/TabsComponent'
 import VenueComponent from './subcomponents/VenueComponent'
-import HotelsComponent from './subcomponents/HotelsComponent'
+// import HotelsComponent from './subcomponents/HotelsComponent'
 import GalleryComponent from './subcomponents/GalleryComponent'
 import FAQComponent from './subcomponents/FAQComponent'
-import SubscribeComponent from './subcomponents/SubscribeComponent'
+import CalculatorComponent from './subcomponents/CalculatorComponent'
 import BuyComponent from './subcomponents/BuyComponent'
 import ContactComponent from './subcomponents/ContactComponent'
 
@@ -40,13 +40,13 @@ export default {
   name: 'LandingMainComponent',
   components: {
     AboutComponent,
-    PersonalComponent,
-    TabsComponent,
+    // PersonalComponent,
+    // TabsComponent,
     VenueComponent,
-    HotelsComponent,
+    // HotelsComponent,
     GalleryComponent,
     FAQComponent,
-    SubscribeComponent,
+    CalculatorComponent,
     BuyComponent,
     ContactComponent
   },
