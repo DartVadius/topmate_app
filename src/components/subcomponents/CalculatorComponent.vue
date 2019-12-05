@@ -102,8 +102,9 @@ export default {
         this.total.sqft += item.pivot.sqft
         this.total.sqm += item.pivot.sqm
       })
+      this.total.sqm = Math.round(this.total.sqm * 10) / 10
       this.showTotal = `${this.total.sqft} sqft / ${this.total.sqm} sqm`
-      console.log(this.selectedParts, selected)
+      // console.log(this.selectedParts, selected)
     },
     purge () {
       this.showTotal = ''

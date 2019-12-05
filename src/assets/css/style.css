@@ -922,11 +922,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 #venue .venue-info h3 {
   font-size: 36px;
   font-weight: 700;
-  color: #fff;
+  color: #30a8e7;
 }
 
 #venue .venue-info p {
-  color: #fff;
+  color: #b7cd4e;
   margin-bottom: 0;
 }
 
@@ -1169,9 +1169,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   right: 0;
 }
 
-#calculator .section-header h2,
+#calculator .section-header h2 {
+  color: #30a8e7;
+}
+
 #calculator p {
-  color: #fff;
+  color: #b7cd4e;
 }
 
 #calculator input {
