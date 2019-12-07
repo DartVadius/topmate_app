@@ -54,15 +54,18 @@
           <div class="col-1">#{{part.id}}</div>
           <div class="col-9">{{part.name}}</div>
           <div class="col-2">
-            <button class="py-1 px-2 btn btn-sm btn-primary" data-toggle="modal" data-target="#calculatorListingModal" @click="showEditModal('model', index)">
+            <button class="py-1 px-2 btn btn-sm btn-primary" data-toggle="modal" data-target="#calculatorListingModal" @click="showEditModal('part', index)">
               <i class="fas fa-pen fa-lg"></i>
             </button>
-            <button class="ml-1 py-1 px-2 btn btn-sm btn-danger" @click="deleteItem('model', index)">
+            <button class="ml-1 py-1 px-2 btn btn-sm btn-danger" @click="deleteItem('part', index)">
               <i class="fas fa-trash-alt fa-lg"></i>
             </button>
           </div>
         </div>
       </div>
+      <!--==========================
+        Modals Section
+      ============================-->
       <div id="calculatorListingModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -255,8 +258,14 @@ export default {
     },
     showEditModal (type, index) {
       this.type = type
-      this.id = this.models[index].id
-      this.name = this.models[index].name
+      if (type === 'model') {
+        this.id = this.models[index].id
+        this.name = this.models[index].name
+      }
+      if (type === 'part') {
+        this.id = this.parts[index].id
+        this.name = this.parts[index].name
+      }
       this.errorBags.clear()
     },
     save () {
