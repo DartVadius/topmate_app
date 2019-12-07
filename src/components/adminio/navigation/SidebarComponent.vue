@@ -12,6 +12,12 @@
       </li>
       <li class="nav-item nav-category"><span class="nav-link">Настройки</span></li>
       <li class="nav-item">
+        <a class="nav-link" href="#" @click="openComponent('contact')">
+          <span class="menu-title">Messages</span>
+          <i class="icon-bell menu-icon"></i>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#" @click="openComponent('faq')">
           <span class="menu-title">FAQ</span>
           <i class="icon-book-open menu-icon"></i>

@@ -1,7 +1,4 @@
 <template>
-  <!--==========================
-        Contact Section
-      ============================-->
   <section id="contact" class="section-bg wow fadeInUp">
 
     <div class="container">
@@ -40,38 +37,95 @@
       </div>
 
       <div class="form">
-        <div id="sendmessage">Your message has been sent. Thank you!</div>
-        <div id="errormessage"></div>
-        <form action="" method="post" role="form" class="contactForm">
+        <div role="form" class="contactForm">
           <div class="form-row">
             <div class="form-group col-md-6">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-              <div class="validation"></div>
+              <input type="text"
+                     v-model="name"
+                     name="name"
+                     class="form-control"
+                     v-validate="'required'"
+                     id="name" placeholder="Your Name"/>
+              <span class="validation">{{ errorBags.first('name') }}</span>
             </div>
             <div class="form-group col-md-6">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-              <div class="validation"></div>
+              <input type="email"
+                     v-model="email"
+                     class="form-control"
+                     name="email"
+                     id="email"
+                     v-validate="'required|email'"
+                     placeholder="Your Email" />
+              <span class="validation">{{ errorBags.first('email') }}</span>
             </div>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-            <div class="validation"></div>
+            <input type="text"
+                   v-model="subject"
+                   class="form-control"
+                   name="subject"
+                   id="subject"
+                   placeholder="Subject"
+                   v-validate="'required'"
+                   data-msg="Please enter at least 8 chars of subject" />
+            <span class="validation">{{ errorBags.first('subject') }}</span>
           </div>
           <div class="form-group">
-            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-            <div class="validation"></div>
+            <textarea class="form-control"
+                      v-model="message"
+                      name="message"
+                      rows="5"
+                      v-validate="'required'"
+                      data-msg="Please write something for us"
+                      placeholder="Message"></textarea>
+            <span class="validation">{{ errorBags.first('message') }}</span>
           </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
-        </form>
+          <div class="text-center"><button type="submit" @click="sendMessage">Send Message</button></div>
+        </div>
       </div>
 
     </div>
-  </section><!-- #contact -->
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'ContactComponent'
+  name: 'ContactComponent',
+  data () {
+    return {
+      name: null,
+      email: null,
+      subject: null,
+      message: null
+    }
+  },
+  methods: {
+    sendMessage () {
+      this.$validator.validate().then(value => {
+        if (value) {
+          this.$store.dispatch('createContact', {
+            name: this.name,
+            email: this.email,
+            subject: this.subject,
+            message: this.message
+          }).then((response) => {
+            const h = this.$createElement
+            this.$notify({
+              title: `Hi, ${this.name}`,
+              message: h('i', { style: 'color: teal' }, 'Your message has been sent. Thank you!')
+            })
+            this.name = null
+            this.email = null
+            this.subject = null
+            this.message = null
+            this.$validator.validate().then(() => {
+              this.errorBags.clear()
+            })
+          })
+        }
+      })
+    }
+  }
 }
 </script>
 

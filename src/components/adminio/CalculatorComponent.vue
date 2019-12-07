@@ -201,7 +201,7 @@ export default {
   methods: {
     updateFilteredParts () {
       const index = this.models.map(e => e.id).indexOf(this.link.modelId)
-      if (index > 0) {
+      if (index > -1) {
         this.filteredParts = this.parts.filter(item => {
           return this.models[index].parts.map(e => e.id).indexOf(item.id) < 0
         })

@@ -8,6 +8,7 @@
           <dashboard-component v-if="component === 'dashboard'"></dashboard-component>
           <faq-component v-if="component === 'faq'"></faq-component>
           <calculator-component v-if="component === 'calculator'"></calculator-component>
+          <contact-component v-if="component === 'contact'"></contact-component>
         </div>
         <!-- content-wrapper ends -->
         <footer-component></footer-component>
@@ -18,12 +19,13 @@
 </template>
 
 <script>
-import NavbarComponent from '../../components/adminio/NavbarComponent'
-import SidebarComponent from '../../components/adminio/SidebarComponent'
+import NavbarComponent from '../../components/adminio/navigation/NavbarComponent'
+import SidebarComponent from '../../components/adminio/navigation/SidebarComponent'
 import FooterComponent from '../../components/adminio/FooterComponent'
 import FaqComponent from '../../components/adminio/FaqComponent'
 import DashboardComponent from '../../components/adminio/DashboardComponent'
 import CalculatorComponent from '../../components/adminio/CalculatorComponent'
+import ContactComponent from '../../components/adminio/ContactComponent'
 
 export default {
   name: 'AdminPanel',
@@ -38,7 +40,8 @@ export default {
     FooterComponent,
     FaqComponent,
     DashboardComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    ContactComponent
   },
   methods: {
     setComponent (component) {

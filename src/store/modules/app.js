@@ -188,6 +188,46 @@ const actions = {
         reject(error)
       })
     })
+  },
+  createContact ({ commit }, credentials) {
+    return new Promise((resolve, reject) => {
+      ApiService.post('/api/contact', credentials).then(response => {
+        resolve(response.data)
+      }).catch(error => {
+        commit(SET_ERROR, error)
+        reject(error)
+      })
+    })
+  },
+  getNewMessages ({ commit }) {
+    return new Promise((resolve, reject) => {
+      ApiService.get('/api/contact').then(response => {
+        resolve(response.data)
+      }).catch(error => {
+        commit(SET_ERROR, error)
+        reject(error)
+      })
+    })
+  },
+  getViewedMessages ({ commit }) {
+    return new Promise((resolve, reject) => {
+      ApiService.get('/api/contact/viewed').then(response => {
+        resolve(response.data)
+      }).catch(error => {
+        commit(SET_ERROR, error)
+        reject(error)
+      })
+    })
+  },
+  setStatusMessage ({ commit }, id) {
+    return new Promise((resolve, reject) => {
+      ApiService.patch(`/api/contact/${id}`).then(response => {
+        resolve(response.data)
+      }).catch(error => {
+        commit(SET_ERROR, error)
+        reject(error)
+      })
+    })
   }
 }
 

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import NavbarComponent from '../../components/adminio/NavbarComponent'
+import NavbarComponent from '../../components/adminio/navigation/NavbarComponent'
 
 export default {
   name: 'Welcome',
